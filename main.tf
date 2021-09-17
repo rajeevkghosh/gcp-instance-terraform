@@ -1,3 +1,6 @@
+provider "google" {
+}
+
 resource "google_compute_instance" "terraform" {
   project      = "secret-proton-312811"
   name         = "terraform"
