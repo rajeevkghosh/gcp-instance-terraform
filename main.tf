@@ -1,4 +1,5 @@
 provider "google" {
+  credentials = "/home/rajeevgcp14/key2.json"
 }
 
 resource "google_compute_instance" "terraform" {
