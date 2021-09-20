@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("secret-proton-312811-ae1e8cfe87ed.json")
+  #credentials = file("secret-proton-312811-ae1e8cfe87ed.json")
 }
 
 resource "google_compute_instance" "terraform" {
