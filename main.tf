@@ -1,9 +1,9 @@
 provider "google" {
-  #credentials = file("secret-proton-312811-ae1e8cfe87ed.json")
+  access_token = var.access_token
 }
 
 resource "google_compute_instance" "terraform" {
-  project      = "secret-proton-312811"
+  project      = "tokyo-nomad-323506"
   name         = "terraform"
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"  
