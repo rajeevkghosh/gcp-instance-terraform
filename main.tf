@@ -5,7 +5,7 @@ provider "google" {
 resource "google_compute_instance" "terraform" {
   project      = "tokyo-nomad-323506"
   name         = "terraform"
-  machine_type = "n1-standard-1"
+  machine_type = "n1-standard-8"
   zone         = "us-central1-a"  
   
   boot_disk {
