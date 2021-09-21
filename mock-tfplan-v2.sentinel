@@ -1,0 +1,503 @@
+terraform_version = "1.0.7"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"google_compute_instance.terraform": {
+			"address":        "google_compute_instance.terraform",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "terraform",
+			"provider_name":  "registry.terraform.io/hashicorp/google",
+			"tainted":        false,
+			"type":           "google_compute_instance",
+			"values": {
+				"advanced_machine_features": [],
+				"allow_stopping_for_update": null,
+				"attached_disk":             [],
+				"boot_disk": [
+					{
+						"auto_delete":             true,
+						"disk_encryption_key_raw": "REDACTED_SENSITIVE",
+						"initialize_params": [
+							{
+								"image": "debian-cloud/debian-9",
+							},
+						],
+						"mode": "READ_WRITE",
+					},
+				],
+				"can_ip_forward":          false,
+				"deletion_protection":     false,
+				"description":             null,
+				"desired_status":          null,
+				"enable_display":          null,
+				"hostname":                null,
+				"labels":                  null,
+				"machine_type":            "n1-standard-1",
+				"metadata":                null,
+				"metadata_startup_script": null,
+				"name": "terraform",
+				"network_interface": [
+					{
+						"access_config": [
+							{
+								"public_ptr_domain_name": null,
+							},
+						],
+						"alias_ip_range": [],
+						"network":        "default",
+						"nic_type":       null,
+					},
+				],
+				"project":                  "tokyo-nomad-323506",
+				"resource_policies":        null,
+				"scratch_disk":             [],
+				"service_account":          [],
+				"shielded_instance_config": [],
+				"tags":     null,
+				"timeouts": null,
+				"zone":     "us-central1-a",
+			},
+		},
+	},
+}
+
+variables = {
+	"access_token": {
+		"name":  "access_token",
+		"value": "REDACTED_SENSITIVE",
+	},
+}
+
+resource_changes = {
+	"google_compute_instance.terraform": {
+		"address": "google_compute_instance.terraform",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"advanced_machine_features": [],
+				"allow_stopping_for_update": null,
+				"attached_disk":             [],
+				"boot_disk": [
+					{
+						"auto_delete":             true,
+						"disk_encryption_key_raw": "REDACTED_SENSITIVE",
+						"initialize_params": [
+							{
+								"image": "debian-cloud/debian-9",
+							},
+						],
+						"mode": "READ_WRITE",
+					},
+				],
+				"can_ip_forward":          false,
+				"deletion_protection":     false,
+				"description":             null,
+				"desired_status":          null,
+				"enable_display":          null,
+				"hostname":                null,
+				"labels":                  null,
+				"machine_type":            "n1-standard-1",
+				"metadata":                null,
+				"metadata_startup_script": null,
+				"name": "terraform",
+				"network_interface": [
+					{
+						"access_config": [
+							{
+								"public_ptr_domain_name": null,
+							},
+						],
+						"alias_ip_range": [],
+						"network":        "default",
+						"nic_type":       null,
+					},
+				],
+				"project":                  "tokyo-nomad-323506",
+				"resource_policies":        null,
+				"scratch_disk":             [],
+				"service_account":          [],
+				"shielded_instance_config": [],
+				"tags":     null,
+				"timeouts": null,
+				"zone":     "us-central1-a",
+			},
+			"after_unknown": {
+				"advanced_machine_features": [],
+				"attached_disk":             [],
+				"boot_disk": [
+					{
+						"device_name":                true,
+						"disk_encryption_key_sha256": true,
+						"initialize_params": [
+							{
+								"labels": true,
+								"size":   true,
+								"type":   true,
+							},
+						],
+						"kms_key_self_link": true,
+						"source":            true,
+					},
+				],
+				"confidential_instance_config": true,
+				"cpu_platform":                 true,
+				"current_status":               true,
+				"guest_accelerator":            true,
+				"id":                           true,
+				"instance_id":                  true,
+				"label_fingerprint":            true,
+				"metadata_fingerprint":         true,
+				"min_cpu_platform":             true,
+				"network_interface": [
+					{
+						"access_config": [
+							{
+								"nat_ip":       true,
+								"network_tier": true,
+							},
+						],
+						"alias_ip_range":     [],
+						"name":               true,
+						"network_ip":         true,
+						"subnetwork":         true,
+						"subnetwork_project": true,
+					},
+				],
+				"reservation_affinity":     true,
+				"scheduling":               true,
+				"scratch_disk":             [],
+				"self_link":                true,
+				"service_account":          [],
+				"shielded_instance_config": [],
+				"tags_fingerprint":         true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "terraform",
+		"provider_name":  "registry.terraform.io/hashicorp/google",
+		"type":           "google_compute_instance",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"google": {
+				"expressions": {
+					"access_token": {
+						"references": [
+							"var.access_token",
+						],
+					},
+				},
+				"name": "google",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "google_compute_instance.terraform",
+					"expressions": {
+						"boot_disk": [
+							{
+								"initialize_params": [
+									{
+										"image": {
+											"constant_value": "debian-cloud/debian-9",
+										},
+									},
+								],
+							},
+						],
+						"machine_type": {
+							"constant_value": "n1-standard-1",
+						},
+						"name": {
+							"constant_value": "terraform",
+						},
+						"network_interface": [
+							{
+								"access_config": [
+									{},
+								],
+								"network": {
+									"constant_value": "default",
+								},
+							},
+						],
+						"project": {
+							"constant_value": "tokyo-nomad-323506",
+						},
+						"zone": {
+							"constant_value": "us-central1-a",
+						},
+					},
+					"mode":                "managed",
+					"name":                "terraform",
+					"provider_config_key": "google",
+					"schema_version":      6,
+					"type":                "google_compute_instance",
+				},
+			],
+			"variables": {
+				"access_token": {
+					"description": "access token",
+					"sensitive":   true,
+				},
+			},
+		},
+	},
+	"format_version": "0.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "google_compute_instance.terraform",
+					"mode":           "managed",
+					"name":           "terraform",
+					"provider_name":  "registry.terraform.io/hashicorp/google",
+					"schema_version": 6,
+					"sensitive_values": {
+						"advanced_machine_features": [],
+						"attached_disk":             [],
+						"boot_disk": [
+							{
+								"initialize_params": [
+									{
+										"labels": {},
+									},
+								],
+							},
+						],
+						"confidential_instance_config": [],
+						"guest_accelerator":            [],
+						"network_interface": [
+							{
+								"access_config": [
+									{},
+								],
+								"alias_ip_range": [],
+							},
+						],
+						"reservation_affinity":     [],
+						"scheduling":               [],
+						"scratch_disk":             [],
+						"service_account":          [],
+						"shielded_instance_config": [],
+					},
+					"type": "google_compute_instance",
+					"values": {
+						"advanced_machine_features": [],
+						"allow_stopping_for_update": null,
+						"attached_disk":             [],
+						"boot_disk": [
+							{
+								"auto_delete":             true,
+								"disk_encryption_key_raw": "REDACTED_SENSITIVE",
+								"initialize_params": [
+									{
+										"image": "debian-cloud/debian-9",
+									},
+								],
+								"mode": "READ_WRITE",
+							},
+						],
+						"can_ip_forward":          false,
+						"deletion_protection":     false,
+						"description":             null,
+						"desired_status":          null,
+						"enable_display":          null,
+						"hostname":                null,
+						"labels":                  null,
+						"machine_type":            "n1-standard-1",
+						"metadata":                null,
+						"metadata_startup_script": null,
+						"name": "terraform",
+						"network_interface": [
+							{
+								"access_config": [
+									{
+										"public_ptr_domain_name": null,
+									},
+								],
+								"alias_ip_range": [],
+								"network":        "default",
+								"nic_type":       null,
+							},
+						],
+						"project":                  "tokyo-nomad-323506",
+						"resource_policies":        null,
+						"scratch_disk":             [],
+						"service_account":          [],
+						"shielded_instance_config": [],
+						"tags":     null,
+						"timeouts": null,
+						"zone":     "us-central1-a",
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "google_compute_instance.terraform",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"advanced_machine_features": [],
+					"allow_stopping_for_update": null,
+					"attached_disk":             [],
+					"boot_disk": [
+						{
+							"auto_delete":             true,
+							"disk_encryption_key_raw": "REDACTED_SENSITIVE",
+							"initialize_params": [
+								{
+									"image": "debian-cloud/debian-9",
+								},
+							],
+							"mode": "READ_WRITE",
+						},
+					],
+					"can_ip_forward":          false,
+					"deletion_protection":     false,
+					"description":             null,
+					"desired_status":          null,
+					"enable_display":          null,
+					"hostname":                null,
+					"labels":                  null,
+					"machine_type":            "n1-standard-1",
+					"metadata":                null,
+					"metadata_startup_script": null,
+					"name": "terraform",
+					"network_interface": [
+						{
+							"access_config": [
+								{
+									"public_ptr_domain_name": null,
+								},
+							],
+							"alias_ip_range": [],
+							"network":        "default",
+							"nic_type":       null,
+						},
+					],
+					"project":                  "tokyo-nomad-323506",
+					"resource_policies":        null,
+					"scratch_disk":             [],
+					"service_account":          [],
+					"shielded_instance_config": [],
+					"tags":     null,
+					"timeouts": null,
+					"zone":     "us-central1-a",
+				},
+				"after_sensitive": {
+					"advanced_machine_features": [],
+					"attached_disk":             [],
+					"boot_disk": [
+						{
+							"disk_encryption_key_raw": true,
+							"initialize_params": [
+								{
+									"labels": {},
+								},
+							],
+						},
+					],
+					"confidential_instance_config": [],
+					"guest_accelerator":            [],
+					"network_interface": [
+						{
+							"access_config": [
+								{},
+							],
+							"alias_ip_range": [],
+						},
+					],
+					"reservation_affinity":     [],
+					"scheduling":               [],
+					"scratch_disk":             [],
+					"service_account":          [],
+					"shielded_instance_config": [],
+				},
+				"after_unknown": {
+					"advanced_machine_features": [],
+					"attached_disk":             [],
+					"boot_disk": [
+						{
+							"device_name":                true,
+							"disk_encryption_key_sha256": true,
+							"initialize_params": [
+								{
+									"labels": true,
+									"size":   true,
+									"type":   true,
+								},
+							],
+							"kms_key_self_link": true,
+							"source":            true,
+						},
+					],
+					"confidential_instance_config": true,
+					"cpu_platform":                 true,
+					"current_status":               true,
+					"guest_accelerator":            true,
+					"id":                           true,
+					"instance_id":                  true,
+					"label_fingerprint":            true,
+					"metadata_fingerprint":         true,
+					"min_cpu_platform":             true,
+					"network_interface": [
+						{
+							"access_config": [
+								{
+									"nat_ip":       true,
+									"network_tier": true,
+								},
+							],
+							"alias_ip_range":     [],
+							"name":               true,
+							"network_ip":         true,
+							"subnetwork":         true,
+							"subnetwork_project": true,
+						},
+					],
+					"reservation_affinity":     true,
+					"scheduling":               true,
+					"scratch_disk":             [],
+					"self_link":                true,
+					"service_account":          [],
+					"shielded_instance_config": [],
+					"tags_fingerprint":         true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "terraform",
+			"provider_name": "registry.terraform.io/hashicorp/google",
+			"type":          "google_compute_instance",
+		},
+	],
+	"terraform_version": "1.0.7",
+	"variables": {
+		"access_token": {
+			"value": "REDACTED_SENSITIVE",
+		},
+	},
+}
