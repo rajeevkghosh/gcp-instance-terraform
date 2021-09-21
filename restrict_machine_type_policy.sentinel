@@ -1,0 +1,29 @@
+# Imports mock data
+import "tfplan/v2" as tfplan
+
+# Get all gcp instances from all modules
+gce_instances = filter tfplan.resource_changes as _, rc {
+    rc.type is "google_compute_instance" and
+        (rc.change.actions contains "create" or rc.change.actions is ["update"])
+}
+
+
+# Allowed Types
+allowed_types = [
+    "n1-standard-1",
+    "n1-standard-2",
+    "n1-standard-4",
+]
+
+
+# Rule to restrict instance types
+instance_type_allowed = rule {
+    all gce_instances as _, instance {
+        instance.change.after.instance_type in allowed_types
+    }
+}
+
+# Main rule that requires other rules to be true
+main = rule {
+    instance_type_allowed is true
+}
