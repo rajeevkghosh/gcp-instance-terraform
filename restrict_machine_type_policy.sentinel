@@ -19,7 +19,7 @@ allowed_types = [
 # Rule to restrict instance types
 instance_type_allowed = rule {
     all gce_instances as _, instance {
-        instance.change.after.instance_type in allowed_types
+        instance.change.after.machine_type in allowed_types
     }
 }
 
